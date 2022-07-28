@@ -7,30 +7,33 @@
     <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
 </head>
 <body>
-    <h1>Pagina Principal</h1>
-    <img src="{% static 'imagens/django.png' %}">
-    <h2>{{ curso }} </h2>
-    <p>{{ outro }}  </p>
+    <section>
+        <div class="principal">
+            <h1>Index</h1>
+            <img src="{% static 'imagens/django.png' %}">
+            <h2>{{ curso }} </h2>
+            <p class="paragrafo">Banco de dados </p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for produto in produtos %}
-            <tr>
-                 <td><a href="{% url 'produto' produto.id %}"> {{ produto.nome}} </a><td>
-                 <td> {{ produto.preco}} <td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for produto in produtos %}
+                    <tr>
+                         <td><a href="{% url 'produto' produto.id %}"> {{ produto.nome}}</a></td>
+                         <td> {{ produto.preco}} </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 
-    <button onclick="teste()">Clique em mim</button>
-
+            <button onclick="teste()">Clique em mim</button>
+        </div>
+    </section>
     <script type="text/javascript" src="{% static 'js/script.js' %}" ></script>
 
 </body>
