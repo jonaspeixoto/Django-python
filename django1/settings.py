@@ -26,7 +26,7 @@ SECRET_KEY = '&6lih$92j*bsk_zc@z032&%ca3pgh@4+5gjqm5_3t0kvhdo4as'
 # DEBUG com valor True = modo desenvolvimento
 # DEBUG com valor false = modo produção
 DEBUG = False
-ALLOWED_HOSTS = ['*']  #
+ALLOWED_HOSTS = ['django1-jnss.herokuapp.com']  #
 
 
 # Application definition
